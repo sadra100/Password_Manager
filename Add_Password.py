@@ -2,7 +2,8 @@ from tkinter import *
 from PIL import Image,ImageTk
 from tkinter import messagebox
 import menu
-import Signup
+import utiles
+
 
 def Add():
     window_add=Tk()
@@ -10,7 +11,7 @@ def Add():
     window_add.geometry('800x500')
     window_add.configure(bg='#000066')
     window_add.resizable(False,False)
-    window_add.iconbitmap('icon2.ico')
+    window_add.iconbitmap('icon_kcl_icon.ico')
 #___________________________________________________________________________________________
     Add_Image_Icon=Image.open('logo2.png')
     Add_Image_Icon=Add_Image_Icon.resize((310,210))
@@ -78,7 +79,7 @@ def Add():
 
         if value_platform_entry and value_account_entry and value_password_entry !="":
             result=value_platform_entry + ' ' + ':' + ' ' + value_account_entry + ' ' + '=' + ' ' + value_password_entry
-            All_Password_Encrypt=Signup.fernet.encrypt(result.encode()).decode()
+            All_Password_Encrypt=utiles.fernet.encrypt(result.encode()).decode()
 
             File_All_Password=open('All_Password','a')
             File_All_Password.write(All_Password_Encrypt+'\n')

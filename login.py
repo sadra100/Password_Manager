@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
-import Signup
+import utiles
 import menu
 
 #_____________________________Login__________________________________
@@ -10,7 +10,7 @@ def Login():
     window_login.geometry('800x500')
     window_login.configure(bg='#000066')
     window_login.resizable(False,False)
-    window_login.iconbitmap('icon2.ico')
+    window_login.iconbitmap('icon_kcl_icon.ico')
     #_____________________________________________________________________
     # text login
     Text_Login=Label(window_login,text='Login',bg='#000066',fg='white',width=10)
@@ -33,7 +33,7 @@ def Login():
     #edit text enter password
     Password_Entry=Entry(frame,width=30)
     Password_Entry.pack()
-    Password_Entry.place(x=35,y=110)
+    Password_Entry.place(x=30,y=110)
     Password_Entry_Style=('Arial')
     Password_Entry.configure(font=Password_Entry_Style)
     #_______________________________________________________________________________________
@@ -42,8 +42,8 @@ def Login():
         if valueEditText=='':
             messagebox.showerror('Error','Please enter your password!')
         else:
-            Signup.check_App_Password()
-            if valueEditText==Signup.App_Password_Decrypt:
+            utiles.check_App_Password()
+            if valueEditText==utiles.App_Password_Decrypt:
                 messagebox.showinfo('Success','Your password is correct')
                 window_login.destroy()
                 menu.Menu()

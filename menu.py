@@ -1,6 +1,8 @@
 from tkinter import *
 from PIL import ImageTk,Image
 import Add_Password
+import passwords
+import delete
 
 #___________________________________Menu___________________________________
 def Menu():
@@ -9,7 +11,7 @@ def Menu():
     window_menu.geometry('800x500')
     window_menu.configure(bg="#000066")
     window_menu.resizable(False,False)
-    window_menu.iconbitmap("icon2.ico")
+    window_menu.iconbitmap("icon_kcl_icon.ico")
 #______________________________________________________________________________
     Text_Menu=Label(window_menu,text='Passam',bg='#000066',fg='white',width=10)
     Text_Menu.pack()
@@ -43,7 +45,8 @@ def Menu():
     Del_Image=ImageTk.PhotoImage(Del_Image)
 
     def Button_Delete_Clicked():
-        pass
+        window_menu.destroy()
+        delete.delete()
 
     Button_Del=Button(Frame_Del,image=Del_Image,command=Button_Delete_Clicked)
     Button_Del.pack()
@@ -58,7 +61,8 @@ def Menu():
     View_Image=ImageTk.PhotoImage(View_Image)
 
     def Button_View_Clicked():
-        pass
+        window_menu.destroy()
+        passwords.passwords()
 
     Button_View=Button(Frame_View,image=View_Image,command=Button_View_Clicked)
     Button_View.pack()
