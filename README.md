@@ -1,4 +1,4 @@
 password Manager program:In this program,the user first define a password on the Sign Up page and can enter the program every time with that  then svae its usernames and passwords on different platforms.
 I first designed Sign Up and Login GUIs  with the help of Tkinter and Pillow modules.,then with the help of Fernet class in Cryptography module i designed cryptography methodes thene using the above modules anf classes i wrote the grafical and logical of the Add,Menu and Delete pages.
 The first challenge of the project was the design of the modular design,which i was able to solve this problem by write the encyption section in a separate script.
-The second challenge on the Delete page was to delete usernames and passwords from the password file,which we open each time we open the password file and delete the username and password and re-write the password in the password file
+The second challenge on the Delete page was to delete usernames and passwords from the passwords file,which we open each time we open the passwords file and delete the username and password and re-write the password in the passwords file
